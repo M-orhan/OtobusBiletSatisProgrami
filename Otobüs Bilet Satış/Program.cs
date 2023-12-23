@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace OTOBÜS_ÖDEV
+namespace BiletSatışProgramı
 {
     public class Program
     {

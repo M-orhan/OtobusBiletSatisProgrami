@@ -4,35 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OTOBÜS_ÖDEV
+namespace BiletSatışProgramı
 {
-    public class AnkaraOtobüs
+    public class İstanbulOtobüs
     {
-        public double Ciro;
-        public string AnkaraSeferi;
-        public int Toplamkoltuksayısı = 40;
+        public double Ciro1;
+        public string İstanbulSeferi;
+        public int Toplamkoltuksayısı=40;
         public int Boskoltuksayısı;
         public int Dolukoltuksayısı;
         public double Tam = 200;
         public double İndirimli = 180;
 
-        public AnkaraOtobüs(string İstanbulSeferi, int KoltukKapasitesi)
+        public İstanbulOtobüs(string İstanbulSeferi,int KoltukKapasitesi)
         {
             Boskoltuksayısı = KoltukKapasitesi;
             Dolukoltuksayısı = 0;
-            Ciro = 0;
+            Ciro1 = 0;
         }
-
-        public void BiletSatAnk(int biletSayisi, bool indirimli)
+       
+        public void BiletSatist(int biletSayisi, bool indirimli)
         {
             if (Boskoltuksayısı >= biletSayisi)
             {
                 double biletFiyati = indirimli ? Tam : İndirimli;
-                Ciro += biletFiyati * biletSayisi;
+                Ciro1 += biletFiyati * biletSayisi;
                 Boskoltuksayısı -= biletSayisi;
                 Dolukoltuksayısı += biletSayisi;
                 Console.WriteLine("{0} adet {1} bilet satıldı.", biletSayisi, indirimli ? "indirimsiz" : "indirimli");
-                Console.WriteLine("Toplam ciro: {0}", Ciro);
+                Console.WriteLine("Toplam ciro: {0}", Ciro1);
             }
             else
             {
@@ -40,14 +40,14 @@ namespace OTOBÜS_ÖDEV
             }
         }
 
-        public int BosKoltukOgrenAnk()
+        public int BosKoltukOgren()
         {
             return Boskoltuksayısı;
         }
 
         public double CiroOgren()
         {
-            return Ciro;
+            return Ciro1;
         }
 
         public void BiletIptal(int biletSayisi, bool indirimli)
@@ -55,11 +55,11 @@ namespace OTOBÜS_ÖDEV
             if (Dolukoltuksayısı >= biletSayisi)
             {
                 double biletFiyati = indirimli ? Tam : İndirimli;
-                Ciro -= biletFiyati * biletSayisi;
+                Ciro1 -= biletFiyati * biletSayisi;
                 Boskoltuksayısı += biletSayisi;
                 Dolukoltuksayısı -= biletSayisi;
                 Console.WriteLine("{0} adet {1} bilet iptal edildi.", biletSayisi, indirimli ? "indirimli" : "indirimsiz");
-                Console.WriteLine("Toplam ciro: {0}", Ciro);
+                Console.WriteLine("Toplam ciro: {0}", Ciro1);
             }
             else
             {
@@ -68,5 +68,4 @@ namespace OTOBÜS_ÖDEV
         }
     }
 }
-
 
