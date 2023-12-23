@@ -146,20 +146,7 @@ namespace OTOBÜS_ÖDEV
 
 
 
-            /*İstanbulOtobüs o = new İstanbulOtobüs("İstanbul", 40);
-            o.BiletSat(false);
-            o.BiletSat(true);
-            o.BiletSat(true);
-            o.BiletSat(false);
-
-            AnkaraOtobüs ao = new AnkaraOtobüs("Ankara", 40);
-            o.BiletSat(true);
-            o.BiletSat(false);
-
-
-            Console.WriteLine("Bakiye :" + o.BakiyeOgren());
-            Console.WriteLine("Boş koltuk sayısı :" + o.BosKoltukOgren());*/
-
+           
         
     
 
